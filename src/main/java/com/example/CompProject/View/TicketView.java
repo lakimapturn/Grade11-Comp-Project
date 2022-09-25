@@ -62,7 +62,10 @@ public class TicketView extends VerticalLayout {
         ticketContainer.getStyle().set("border-radius", "1rem");
         ticketContainer.getStyle().set("background-color", "firebrick");
         ticketContainer.getStyle().set("padding", "0rem 0rem 2rem");
-        ticketContainer.add(new H3(this.user.getTrain().getName() + " - " + this.user.getTrain().getId()));
+
+        H3 ticketHeader = new H3(this.user.getTrain().getName() + " - " + this.user.getTrain().getId());
+        ticketHeader.getStyle().set("color", "white");
+        ticketContainer.add(ticketHeader);
 
         Div ticket = new Div();
         ticket.getStyle().set("padding", "0rem");
